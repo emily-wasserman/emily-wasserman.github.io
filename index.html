@@ -1,0 +1,268 @@
+<head>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+#portrait {
+	position: absolute;
+	left: 78;
+	top: 78;
+	opacity: 0;
+	z-index: 0;
+	-webkit-transition: opacity 2s ease;
+}
+
+#portrait:hover {
+	opacity: 1;
+}
+
+#page_container {
+	height: 800;
+	width: 1440;
+	position: relative;
+}
+
+#name_title {
+	font-size: 40px;
+	position: absolute;
+	left: 220px;
+	top: 80px;
+}
+
+#node1 {left: 322px;top: 190px;}
+#node2 {left: 400px;top: 280px;}
+#node3 {left: 111px;top: 320px;font-size: 45px;}
+#node4 {left: 111px;top: 500;}
+
+#mini1 {left: 682px;top: 310px;}
+#mini2 {left: 682px;top: 430px;}
+#mini3 {left: 682px;top: 540px;}
+
+#project1 {left:705px;top:295px;}
+#project2 {left:705px;top:415px;}
+#project3 {left:705px;top:525px;}
+
+#span1 {left: 392px;top: 190px;} 
+#span2 {left: 470px;top: 280px;} 
+#span3 {left: 181px;top: 320px;} 
+#span4 {left: 181px;top: 500px;}
+
+#my_about {left: 480px;top: 180px;}
+#my_email {left: 315px;top: 390px;}
+#my_github {left: 505px;top: 390px;}
+#my_work {left: 160px; top: 365px;}
+#my_worksite {left: 160px; top: 415px;}
+#my_resume {left: 160px; top: 450px;}
+#life1 {left: 275px;top: 575px;}
+#life2 {left: 365px;top: 625px;}
+#life3 {left: 455px;top: 675px;}
+
+.span_title {
+	opacity: 0;
+	position: absolute;
+	font-size: 30px;
+}
+
+.cont_text,
+.cont_link  {
+	display: none;
+	position: absolute;
+	z-index: 2;
+}
+
+.cont_project {
+	border: 4px solid black;
+	width: 450px;
+}
+
+.project_div {
+	display: none;
+	position: absolute;
+	left: 900px;
+	top: 25%;
+	z-index: 2;
+}
+
+.project_text {
+	width: 450px;
+	text-align: center;
+}
+
+.round-button {
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	border: 2px transparent;
+	background-color: transparent;
+	text-align: center;
+	line-height: 1em;
+	color: #d9d9d9;
+	font-size: 50px;
+	font-family: 'Montserrat', serif;
+	-webkit-transition: color 0.5s ease;
+}
+
+.mini_button {
+	position: absolute;
+	height: 17px;
+	width: 17px;
+	border-radius: 50%;
+	border: 2px transparent;
+	background-color: black;
+}
+
+.round-button:hover,
+.round-button:focus,
+.round-button:active {
+	outline: none;
+	color: black;
+}
+
+.mini_button:hover,
+.mini_button:focus,
+.mini_button:active {
+	outline: none;
+}
+
+.round-button:focus ~ .cont_text,
+.round-button:focus ~ .cont_link,
+.mini_button:focus ~ .cont_text,
+.mini_button:focus ~ .project_div,
+.mini_button:focus ~ .cont_link,
+.cont_link:active
+ {
+	display: inline;
+}
+
+.round-button:hover,
+.round-button:focus ~ .span_title {
+	opacity: 1;
+}
+
+svg {
+	background: transparent;
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+	padding: 0;
+	background-color: #FFFFFF;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+}
+
+a {
+	color: black;
+}
+
+</style>
+</head>
+
+<body>
+<div id="page_container">
+	<img id="portrait" src="portrait_sm.png"></img>
+	<div id="name_title">emily a. wasserman</div>
+	<div>
+		<button class="round-button" id="node1">A</button>
+		<span class="span_title" id="span1">bout</span>
+		<div class="cont_text" id="my_about">
+			<p>
+				I work in moral psychology and social neuroscience.<br>
+				I care about civic engagement and climate legislation.<br>
+				I enjoy books &amp; recipes, cats &amp; code, hiking trails &amp; well-flavored cocktails.<br>
+				I believe that an understanding of human cognition makes most things better.
+			</p>
+		</div>
+	</div>
+	<div>
+		<button class="round-button" id="node2">C</button>
+		<span class="span_title" id="span2">ontact</span>
+		<div class="cont_link" id="my_email">
+			<a href="mailto:wasserman.e.a@gmail.com" target="_blank">wasserman.e.a<br>@gmail.com</a>
+		</div>
+		<div class="cont_link" id="my_github">
+			<a href="https://github.com/emily-wasserman" target="_blank">github.com/<br>emily-wasserman</a>
+		</div>
+	</div>
+	<div>
+		<button class="round-button" id="node3">W</button>
+		<span class="span_title" id="span3">ork</span>
+		<div class="cont_text" id="my_work">
+			<p>Lab manager<br>BC Morality Lab<br>				
+			</p>
+		</div>
+		<a href="http://moralitylab.bc.edu/emily-wasserman" target="_blank" class="cont_link" id="my_worksite">moralitylab.bc.edu/emily-wasserman</a>
+		<a href="wasserman_e_resume.pdf" target="_blank" class="cont_link" id="my_resume">Resume</a>
+	</div>
+	<div>
+		<div>
+			<button class="mini_button" id="mini1"></button>
+			<div class="cont_link" id="project1">
+				<p><a href="http://moralitylab.bc.edu/wp-content/uploads/2017/04/dis_manuscript_d2.pdf" target="_blank"><b>Structure in the space of<br>moral representations</b></a></p>
+			</div>
+			<div id="projectimg1" class="project_div">
+				<a target="_blank" href="./project_1.png">
+				<img src="project_1.png" class="cont_project"></img>
+				</a>
+				<div class="project_text"><br>
+				There are many, and many different, ways to do something wrong.
+					Is there structure in the space of harmful acts?<br><br>
+					I used representational similarity analysis, PCA, and K-means clustering to model where, across the brain, different features drive convergence among representations of these acts.</div>
+			</div>
+		</div>
+		<div>
+			<button class="mini_button" id="mini2"></button>
+			<div class="cont_link" id="project2">
+				<p><a href="https://osf.io/tht5j/" target="_blank"><b>Harmful acts committed<br>by the self and others</b></a></p>
+			</div>
+			<div class="project_div" id="projectimg2">
+				<a target="_blank" href="./project_2.png">
+				<img src="project_2.png" class="cont_project"></img>
+			</a>
+			<div class="project_text"><br>When we do something bad, we often let ourselves off the hook - but not always. 
+				Past data shows that people condemn themselves slightly <i>more</i> than others for accidental harms.<br><br>
+				I'm leading an fMRI project to discover how representations of our own and others' minds contribute to this effect.</div>
+			</div>
+		</div>
+		<div>
+			<button class="mini_button" id="mini3"></button>
+			<div class="cont_text" id="project3">
+				<p><b>Altruism in the brain</b></p>
+			</div>
+			<div class="project_div" id="projectimg3">
+				<a target="_blank" href="./project_3.png" >
+				<img src="project_3.png" class="cont_project"></img>
+			</a>
+			<div class="project_text"><br>Imagine helping a person in need. In your mind, are you picturing just a person - or a whole scene?<br><br>
+			As a collaborator, I ran mixed linear models in R on fMRI and behavioral data to investigate how activity in brain regions that represent information about scenes contributes to our decisions to help others.</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<button class="round-button" id="node4">L</button>
+		<span class="span_title" id="span4">ife</span>
+		<div class="cont_link" id="life1">
+			<p>I'm helping to build a financial modeling app for people on government benefits with <a href="http://www.codeforboston.org/" target="_blank">Code for Boston</a>. 
+			</p>
+		</div>
+		<div class="cont_link" id="life2">
+			<p>I volunteer with <a href="http://citizensclimatelobby.org" target="_blank">CCL</a> Boston to build political will for carbon-fee legislation.
+			</p>
+		</div>
+		<div class="cont_link" id="life3">
+			<p>In college, I led a team that designed and ran immersive games for <a href="http://www.claremonthvz.org/" target="_blank">Claremont HvZ</a>.
+			</p>
+		</div>
+	</div>
+	<svg id="neuron_flow" height="800" width="1440" 
+	     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+	  <image x="0" y="0" height="800" width="1440" opacity="1" z-index="1" xlink:href="neuron_flow_2.svg" />
+	</svg>
+</div>
+
+</body>
